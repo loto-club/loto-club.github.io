@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- SEO Meta Tags -->
+	<title>ЛотоКлаб Казахстан — Официальный сайт онлайн-лотереи | LotoClub</title>
+	<meta name="description" content="Официальная лотерея Казахстана ЛотоКлаб (LotoClub). Играйте в Keno, Bingo, Loto Plus онлайн. Покупка билетов, результаты тиражей сегодня, проверка выигрыша. Скачайте приложение LOTO SZ.">
+	<meta name="keywords" content="лотоклаб казахстан, lotoclub казахстан, лото клуб официальный сайт, официальная лотерея Казахстана, онлайн-лотерея Казахстан">
+	
+	<!-- Open Graph / Social Media -->
+	<meta property="og:title" content="ЛотоКлаб — Играй и выигрывай в Казахстане!">
+	<meta property="og:description" content="Крупные призовые фонды, тиражи каждые 5 минут. Регистрируйся и получай бонусы!">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://lotoclub.kz/">
+
+	<!-- Styles -->
+	<style>
+		/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 */
+		@font-face {
+			font-family: 'Lato';
+			src: url('assets/fonts/lato-400.woff2') format('woff2');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Lato';
+			src: url('assets/fonts/lato-500.woff2') format('woff2');
+			font-weight: 500;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Lato';
+			src: url('assets/fonts/lato-600.woff2') format('woff2');
+			font-weight: 600;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Lato';
+			src: url('assets/fonts/lato-700.woff2') format('woff2');
+			font-weight: 700;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		:root {
+			--font-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+			--font-display: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+			--primary-color: #133b6b;
+			--accent-color: #f8de32;
+			--secondary-color: #efcc40;
+			--navy-2500: #061424;
+			--navy-2400: #081a2e;
+			--navy-2300: #091d35;
+			--navy-2200: #0c2642;
+			--navy-2100: #0e2c4c;
+			--blue-bright: #55a3ff;
+			--blue-card: #215f9f;
+			--text-dark: #f3f3f6;
+			--text-muted: #868fae;
+			--text-light: #ffffff;
+			--bg-light: #091d35;
+			--surface: #0c2642;
+			--surface-raised: #0e2c4c;
+			--surface-card: #215f9f;
+			--line-color: rgba(206, 207, 219, 0.14);
+			--border-radius: 16px;
+			--shadow-soft: 0 18px 44px rgba(0,0,0,0.24);
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			overflow-x: clip;
+		}
+
+		body {
+			font-family: var(--font-body);
+			line-height: 1.6;
+			color: var(--text-muted);
+			background: var(--navy-2300);
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: color 0.3s ease;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		/* Container */
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		/* Header & Navigation */
+		header {
+			background-color: var(--navy-2100);
+			color: var(--text-muted);
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+		}
+
+		.header-inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 70px;
+		}
+
+		.logo {
+			width: 92px;
+			min-width: 92px;
+			height: 46px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		.logo img {
+			width: 72px;
+			height: auto;
+			display: block;
+		}
+
+		.nav-menu {
+			display: flex;
+			gap: 20px;
+		}
+
+		.nav-item {
+			position: relative;
+		}
+
+		.nav-link {
+			padding: 10px 12px;
+			font-weight: 600;
+			color: var(--text-muted);
+		}
+
+		.nav-link:hover {
+			color: var(--text-light);
+		}
+
+		/* Dropdown */
+		.dropdown-menu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: var(--navy-2200);
+			color: var(--text-muted);
+			min-width: 220px;
+			box-shadow: var(--shadow-soft);
+			border-radius: var(--border-radius);
+			border: 1px solid var(--line-color);
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(10px);
+			transition: all 0.3s ease;
+			padding: 10px 0;
+		}
+
+		.nav-item:hover .dropdown-menu {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+
+		.dropdown-item {
+			display: block;
+			padding: 8px 20px;
+			font-size: 0.9rem;
+		}
+
+		.dropdown-item:hover {
+			background-color: var(--navy-2100);
+			color: var(--text-light);
+		}
+
+		/* Auth Buttons */
+		.auth-buttons {
+			display: flex;
+			gap: 15px;
+		}
+
+		.btn {
+			padding: 10px 22px;
+			border-radius: 10px;
+			font-weight: 700;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			display: inline-block;
+			text-align: center;
+		}
+
+		.btn-outline {
+			border: 2px solid var(--accent-color);
+			color: var(--accent-color);
+			background: transparent;
+		}
+
+		.btn-outline:hover {
+			background-color: rgba(248, 222, 50, 0.12);
+		}
+
+		.btn-primary {
+			background-color: var(--accent-color);
+			color: var(--navy-2500);
+			border: none;
+		}
+
+		.btn-primary:hover {
+			background-color: var(--secondary-color);
+			transform: translateY(-2px);
+		}
+
+		/* Mobile Menu Toggle */
+		.mobile-toggle {
+			display: none;
+			font-size: 1.5rem;
+			cursor: pointer;
+		}
+
+		/* Hero Section */
+		.hero {
+			background: var(--navy-2300);
+			color: var(--text-light);
+			padding: 32px 0 42px;
+			text-align: left;
+			position: relative;
+			overflow: visible;
+		}
+
+		.hero::before {
+			display: none;
+		}
+
+		@keyframes rotate {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+
+		.hero-content {
+			position: relative;
+			z-index: 1;
+			background:
+				linear-gradient(90deg, rgba(6,20,36,0.96) 0%, rgba(6,20,36,0.84) 45%, rgba(6,20,36,0.22) 100%),
+				url('assets/main-page.webp') center right / cover no-repeat,
+				var(--navy-2100);
+			border-radius: 24px;
+			box-shadow: var(--shadow-soft);
+			padding: 52px 42px;
+			overflow: hidden;
+			min-height: 520px;
+			display: flex;
+			align-items: flex-end;
+		}
+
+		.hero-copy {
+			position: relative;
+			z-index: 2;
+			max-width: 700px;
+		}
+
+		.hero h1 {
+			font-family: var(--font-display);
+			font-size: clamp(2rem, 5vw, 4rem);
+			line-height: 1.05;
+			max-width: 680px;
+			margin-bottom: 18px;
+			color: var(--text-light);
+			overflow-wrap: anywhere;
+		}
+
+		.hero p {
+			font-size: 1.1rem;
+			max-width: 560px;
+			margin-bottom: 30px;
+			color: var(--text-muted);
+		}
+
+		/* Stats Bar */
+		.stats-bar {
+			display: flex;
+			justify-content: flex-start;
+			gap: 14px;
+			margin-top: 40px;
+			flex-wrap: wrap;
+		}
+
+		.stat-item {
+			text-align: left;
+			background: rgba(6,20,36,0.52);
+			border: 1px solid var(--line-color);
+			border-radius: 14px;
+			padding: 14px 18px;
+			min-width: 180px;
+		}
+
+		.stat-value {
+			font-size: 1.8rem;
+			font-weight: bold;
+			color: var(--accent-color);
+			display: block;
+		}
+
+		.stat-label {
+			font-size: 0.9rem;
+			color: var(--text-muted);
+		}
+
+		/* Section Styles */
+		section {
+			padding: 54px 0;
+		}
+
+		.section-title {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.section-title h2 {
+			font-size: 2rem;
+			color: var(--text-light);
+			margin-bottom: 10px;
+		}
+
+		.section-title p {
+			color: var(--text-muted);
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		#games .section-title,
+		.results-section .section-title,
+		.advantages-section .section-title,
+		.glossary-section .section-title {
+			text-align: left;
+		}
+
+		#games .section-title p,
+		.results-section .section-title p,
+		.advantages-section .section-title p,
+		.glossary-section .section-title p {
+			margin: 0;
+		}
+
+		/* Games Carousel */
+		.games-carousel {
+			position: relative;
+		}
+
+		.games-viewport {
+			overflow: hidden;
+			margin: 0 56px;
+			padding: 8px 4px 18px;
+			touch-action: pan-y;
+		}
+
+		.games-track {
+			display: flex;
+			gap: 30px;
+			transition: transform 0.35s ease;
+			will-change: transform;
+		}
+
+		.game-card {
+			background: var(--surface-card);
+			border-radius: var(--border-radius);
+			box-shadow: none;
+			overflow: hidden;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			display: flex;
+			flex-direction: column;
+			flex: 0 0 calc((100% - 60px) / 3);
+			min-width: 0;
+			border: 1px solid rgba(255,255,255,0.04);
+		}
+
+		.game-card:hover {
+			transform: translateY(-5px);
+			box-shadow: var(--shadow-soft);
+		}
+
+		.game-image-placeholder {
+			height: 168px;
+			background: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			color: var(--text-light);
+			font-weight: bold;
+			position: relative;
+			padding: 22px;
+			gap: 18px;
+		}
+
+		.game-logo {
+			width: 110px;
+			height: 90px;
+			object-fit: contain;
+			flex: 0 0 110px;
+			filter: drop-shadow(0 10px 16px rgba(0,0,0,0.2));
+		}
+
+		.game-keno .game-logo,
+		.game-loto-plus .game-logo,
+		.game-naval .game-logo {
+			width: 126px;
+		}
+
+		.game-badge {
+			position: absolute;
+			top: 18px;
+			right: 18px;
+			background-color: rgba(85,163,255,0.8);
+			color: var(--text-light);
+			padding: 5px 10px;
+			border-radius: 6px;
+			font-size: 0.76rem;
+			font-weight: bold;
+		}
+
+		.game-content {
+			padding: 0 22px 20px;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.game-title {
+			font-size: 1.25rem;
+			margin-bottom: 4px;
+			color: var(--text-light);
+		}
+
+		.game-title-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			color: inherit;
+			min-width: 0;
+		}
+
+		.game-title-logo {
+			width: 42px;
+			height: 42px;
+			object-fit: contain;
+			flex: 0 0 42px;
+			border-radius: 10px;
+			padding: 5px;
+			background: rgba(6,20,36,0.28);
+			box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+		}
+
+		.game-title-text {
+			line-height: 1.12;
+			overflow-wrap: anywhere;
+		}
+
+		.game-desc {
+			font-size: 0.92rem;
+			color: var(--text-light);
+			margin-bottom: 18px;
+			opacity: 0.9;
+			flex-grow: 1;
+		}
+
+		.game-link {
+			color: var(--text-light);
+			font-weight: bold;
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+		}
+
+		.game-progress {
+			height: 5px;
+			background-color: rgba(6,20,36,0.42);
+			border-radius: 999px;
+			margin: 2px 0 18px;
+			overflow: hidden;
+		}
+
+		.game-progress span {
+			display: block;
+			height: 100%;
+			width: 88%;
+			background: #16d43a;
+			border-radius: inherit;
+		}
+
+		.game-progress.is-yellow span {
+			width: 72%;
+			background: var(--accent-color);
+		}
+
+		.game-draw-link {
+			margin: 0 -22px -20px;
+			padding: 18px 22px;
+			border-top: 2px dotted rgba(6,20,36,0.8);
+			text-align: center;
+			color: rgba(6,20,36,0.65);
+			font-weight: 800;
+			font-size: 1.05rem;
+		}
+
+		.game-draw-link:hover {
+			color: var(--navy-2500);
+		}
+
+		.carousel-btn {
+			position: absolute;
+			top: 50%;
+			z-index: 2;
+			width: 44px;
+			height: 44px;
+			border: none;
+			border-radius: 50%;
+			background-color: var(--navy-2100);
+			color: var(--text-light);
+			box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+			cursor: pointer;
+			font-size: 2rem;
+			line-height: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: translateY(-50%);
+			transition: background 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+		}
+
+		.carousel-btn:hover:not(:disabled) {
+			background-color: var(--accent-color);
+			color: var(--navy-2500);
+			transform: translateY(-50%) scale(1.05);
+		}
+
+		.carousel-btn:disabled {
+			cursor: default;
+			opacity: 0.35;
+		}
+
+		.carousel-btn-prev {
+			left: 0;
+		}
+
+		.carousel-btn-next {
+			right: 0;
+		}
+
+		.carousel-dots {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			min-height: 16px;
+		}
+
+		.carousel-dot {
+			width: 10px;
+			height: 10px;
+			border: none;
+			border-radius: 999px;
+			background-color: var(--navy-2100);
+			cursor: pointer;
+			padding: 0;
+			transition: width 0.3s ease, background 0.3s ease;
+		}
+
+		.carousel-dot.active {
+			width: 28px;
+			background-color: var(--accent-color);
+		}
+
+		/* Results Section */
+		.results-section {
+			background-color: var(--navy-2300);
+		}
+
+		.results-section h3 {
+			color: var(--text-light) !important;
+		}
+
+		.recent-results-table {
+			width: 100%;
+			border-collapse: collapse;
+			background: var(--navy-2200);
+			border-radius: var(--border-radius);
+			overflow: hidden;
+			box-shadow: var(--shadow-soft);
+			color: var(--text-muted);
+		}
+
+		.recent-results-table th, 
+		.recent-results-table td {
+			padding: 15px;
+			text-align: left;
+			border-bottom: 1px solid var(--line-color);
+		}
+
+		.recent-results-table th {
+			background-color: var(--navy-2100);
+			color: var(--text-light);
+		}
+
+		.ball-container {
+			display: flex;
+			gap: 5px;
+			flex-wrap: wrap;
+		}
+
+		.mini-ball {
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background-color: var(--secondary-color);
+			color: var(--navy-2500);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.7rem;
+			font-weight: bold;
+		}
+
+		/* Promotions */
+		.promotions-section,
+		.top-winners-section {
+			background-color: var(--navy-2300);
+		}
+
+		.section-head-row {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			gap: 20px;
+			margin-bottom: 26px;
+		}
+
+		.section-head-row .section-title {
+			text-align: left;
+			margin-bottom: 0;
+		}
+
+		.section-head-row .section-title p {
+			margin: 0;
+		}
+
+		.promotions-grid {
+			display: grid;
+			grid-template-columns: repeat(5, minmax(0, 1fr));
+			gap: 16px;
+		}
+
+		.promo-card {
+			min-height: 178px;
+			border-radius: var(--border-radius);
+			background: linear-gradient(180deg, #215f9f 0%, #aab9cc 100%);
+			color: var(--text-light);
+			padding: 16px;
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.promo-card:hover {
+			transform: translateY(-5px);
+			box-shadow: var(--shadow-soft);
+		}
+
+		.promo-card h3 {
+			position: relative;
+			z-index: 2;
+			font-size: 1.05rem;
+			line-height: 1.15;
+			max-width: 160px;
+		}
+
+		.promo-card img {
+			position: absolute;
+			right: 8px;
+			bottom: 8px;
+			width: 58%;
+			height: 62%;
+			object-fit: contain;
+			filter: drop-shadow(0 14px 22px rgba(0,0,0,0.22));
+		}
+
+		.top-winners-panel {
+			background: var(--navy-2200);
+			border-radius: var(--border-radius);
+			box-shadow: var(--shadow-soft);
+			overflow: hidden;
+		}
+
+		.winners-tabs {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.winners-tab {
+			border: 0;
+			border-radius: 10px;
+			background: var(--navy-2200);
+			color: var(--text-muted);
+			font: 700 0.95rem/1 var(--font-body);
+			padding: 12px 18px;
+			cursor: pointer;
+		}
+
+		.winners-tab.active {
+			background: var(--navy-2100);
+			color: var(--text-light);
+		}
+
+		.top-winners-table {
+			width: 100%;
+			border-collapse: collapse;
+			color: var(--text-muted);
+		}
+
+		.top-winners-table th,
+		.top-winners-table td {
+			padding: 14px 18px;
+			border-bottom: 1px solid var(--line-color);
+			text-align: left;
+			vertical-align: middle;
+		}
+
+		.top-winners-table th {
+			color: var(--text-light);
+			background: var(--navy-2100);
+			font-size: 0.86rem;
+			text-transform: uppercase;
+			letter-spacing: 0.02em;
+		}
+
+		.winner-place {
+			width: 34px;
+			height: 34px;
+			border-radius: 10px;
+			background: var(--navy-2100);
+			color: var(--text-light);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 800;
+		}
+
+		.winner-game-icon {
+			width: 40px;
+			height: 40px;
+			object-fit: contain;
+			display: block;
+		}
+
+		.winner-amount {
+			color: var(--accent-color);
+			font-weight: 800;
+			text-align: right;
+			white-space: nowrap;
+		}
+
+		/* Advantages */
+		.advantages-section {
+			background: var(--navy-2300);
+		}
+
+		.advantages-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 22px;
+			text-align: left;
+		}
+
+		.advantage-item {
+			background: var(--navy-2200);
+			border: 1px solid var(--line-color);
+			border-radius: var(--border-radius);
+			box-shadow: none;
+			min-height: 210px;
+			padding: 24px;
+			position: relative;
+			overflow: hidden;
+			transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+		}
+
+		.advantage-item::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: var(--accent-color);
+		}
+
+		.advantage-item:hover {
+			transform: translateY(-6px);
+			border-color: rgba(248,222,50,0.35);
+			box-shadow: var(--shadow-soft);
+		}
+
+		.adv-icon {
+			width: 54px;
+			height: 54px;
+			border-radius: 16px;
+			background: rgba(248,222,50,0.12);
+			color: var(--accent-color);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.7rem;
+			margin-bottom: 18px;
+		}
+
+		.advantage-item h3 {
+			color: var(--text-light);
+			font-size: 1.12rem;
+			margin-bottom: 10px;
+		}
+
+		.advantage-item p {
+			color: var(--text-muted);
+			font-size: 0.93rem;
+		}
+
+		.advantage-item:nth-child(3n+2)::before {
+			background: #55a3ff;
+		}
+
+		.advantage-item:nth-child(3n+2) .adv-icon {
+			background: rgba(85,163,255,0.12);
+			color: #55a3ff;
+		}
+
+		.advantage-item:nth-child(3n+3)::before {
+			background: var(--secondary-color);
+		}
+
+		.advantage-item:nth-child(3n+3) .adv-icon {
+			background: rgba(239,204,64,0.12);
+			color: var(--secondary-color);
+		}
+
+		/* App Download */
+		.app-section {
+			background: radial-gradient(circle at 88% 18%, rgba(248,222,50,0.18), transparent 24%), var(--navy-2100);
+			color: var(--text-light);
+			border-radius: 24px;
+			padding: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 40px;
+		}
+
+		.app-text h2 {
+			margin-bottom: 15px;
+		}
+
+		.app-buttons {
+			display: flex;
+			gap: 15px;
+		}
+
+		.store-btn {
+			background-color: rgba(255,255,255,0.08);
+			padding: 10px 20px;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			transition: background 0.3s;
+		}
+
+		.store-btn:hover {
+			background-color: rgba(255,255,255,0.14);
+		}
+
+		/* Glossary */
+		.glossary-section {
+			background-color: var(--navy-2300);
+		}
+
+		.glossary-grid {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 18px;
+		}
+
+		.glossary-item {
+			background: var(--navy-2200);
+			border: 1px solid var(--line-color);
+			border-radius: var(--border-radius);
+			box-shadow: 0 8px 20px rgba(26,35,126,0.06);
+			display: grid;
+			grid-template-columns: 48px 1fr;
+			gap: 16px;
+			padding: 20px;
+			transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.glossary-item:hover {
+			transform: translateY(-4px);
+			border-color: rgba(248,222,50,0.35);
+			box-shadow: var(--shadow-soft);
+		}
+
+		.glossary-letter {
+			width: 48px;
+			height: 48px;
+			border-radius: 14px;
+			background: rgba(248,222,50,0.12);
+			color: var(--accent-color);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.2rem;
+			font-weight: 800;
+		}
+
+		.glossary-item:nth-child(2n) .glossary-letter {
+			background: rgba(85,163,255,0.12);
+			color: #55a3ff;
+		}
+
+		.glossary-term {
+			color: var(--text-light);
+			font-size: 1.08rem;
+			font-weight: 700;
+			margin-bottom: 6px;
+		}
+
+		.glossary-desc {
+			color: var(--text-muted);
+			font-size: 0.93rem;
+		}
+
+		/* FAQ */
+		.faq-item {
+			border-bottom: 1px solid var(--line-color);
+		}
+
+		.faq-question {
+			width: 100%;
+			text-align: left;
+			padding: 15px 0;
+			background: none;
+			border: none;
+			font-size: 1.1rem;
+			font-weight: 600;
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: var(--text-light);
+		}
+
+		.faq-answer {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease-out;
+			padding-right: 20px;
+		}
+
+		.faq-item.active .faq-answer {
+			max-height: 200px; /* Approximate height */
+			padding-bottom: 15px;
+		}
+
+		.faq-icon {
+			transition: transform 0.3s ease;
+		}
+
+		.faq-item.active .faq-icon {
+			transform: rotate(180deg);
+		}
+
+		/* Footer */
+		footer {
+			background-color: var(--navy-2500);
+			color: var(--text-muted);
+			padding: 50px 0 20px;
+		}
+
+		.footer-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 40px;
+			margin-bottom: 40px;
+		}
+
+		.footer-col h3 {
+			color: white;
+			margin-bottom: 20px;
+			font-size: 1.1rem;
+		}
+
+		.footer-links li {
+			margin-bottom: 10px;
+		}
+
+		.footer-links a:hover {
+			color: var(--secondary-color);
+		}
+
+		.footer-bottom {
+			border-top: 1px solid var(--line-color);
+			padding-top: 20px;
+			text-align: center;
+			font-size: 0.9rem;
+		}
+
+		.responsible-play {
+			margin-top: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			color: #fff;
+		}
+
+		@media (max-width: 980px) {
+			.games-viewport {
+				margin: 0 50px;
+			}
+
+			.game-card {
+				flex-basis: calc((100% - 30px) / 2);
+			}
+
+			.advantages-grid {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.promotions-grid {
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+			}
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.nav-menu {
+				display: none; /* Hide desktop menu */
+				position: absolute;
+				top: 70px;
+				left: 0;
+				width: 100%;
+				background-color: var(--navy-2100);
+				flex-direction: column;
+				padding: 20px;
+			}
+
+			.nav-menu.active {
+				display: flex;
+			}
+
+			.dropdown-menu {
+				position: static;
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+				box-shadow: none;
+				background-color: rgba(0,0,0,0.1);
+				color: white;
+				display: none; /* Hide by default on mobile */
+			}
+			
+			.nav-item:hover .dropdown-menu {
+				 display: block;
+			}
+
+			.mobile-toggle {
+				display: block;
+			}
+
+			.hero h1 {
+				font-size: 2rem;
+			}
+
+			.app-section {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.stats-bar {
+				gap: 20px;
+			}
+
+			.glossary-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.promotions-grid {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.section-head-row {
+				align-items: flex-start;
+				flex-direction: column;
+			}
+
+			.top-winners-panel {
+				overflow-x: visible;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.advantages-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.advantage-item {
+				min-height: auto;
+			}
+
+			.hero-content {
+				padding: 30px 22px;
+				min-height: 500px;
+				background:
+					linear-gradient(180deg, rgba(6,20,36,0.96) 0%, rgba(6,20,36,0.88) 52%, rgba(6,20,36,0.54) 100%),
+					url('assets/main-page.webp') center bottom / cover no-repeat,
+					var(--navy-2100);
+			}
+
+			.stats-bar {
+				flex-direction: column;
+			}
+
+			.stat-item {
+				width: 100%;
+			}
+
+			.promotions-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.promo-card {
+				min-height: 160px;
+			}
+
+			.top-winners-table th,
+			.top-winners-table td {
+				padding: 9px 6px;
+				font-size: 0.72rem;
+			}
+
+			.top-winners-table th {
+				font-size: 0.62rem;
+			}
+
+			.winner-place {
+				width: 26px;
+				height: 26px;
+				border-radius: 8px;
+				font-size: 0.72rem;
+			}
+
+			.winner-game-icon {
+				width: 28px;
+				height: 28px;
+			}
+
+			.winner-amount {
+				font-size: 0.72rem;
+			}
+
+			.recent-results-table {
+				table-layout: fixed;
+			}
+
+			.recent-results-table th,
+			.recent-results-table td {
+				padding: 8px 6px;
+				font-size: 0.68rem;
+			}
+
+			.recent-results-table th:first-child,
+			.recent-results-table td:first-child {
+				width: 56px;
+			}
+
+			.recent-results-table th:last-child,
+			.recent-results-table td:last-child {
+				width: 74px;
+			}
+
+			.recent-results-table a {
+				line-height: 1.2;
+			}
+
+			.ball-container {
+				gap: 3px;
+			}
+
+			.mini-ball {
+				width: 18px;
+				height: 18px;
+				font-size: 0.56rem;
+			}
+
+			.auth-buttons {
+				gap: 8px;
+			}
+
+			.auth-buttons .btn-outline {
+				display: none;
+			}
+
+			.auth-buttons .btn-primary {
+				max-width: 122px;
+				padding: 9px 12px;
+				font-size: 0.86rem;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.glossary-item {
+				grid-template-columns: 42px 1fr;
+				padding: 18px;
+			}
+
+			.glossary-letter {
+				width: 42px;
+				height: 42px;
+				border-radius: 12px;
+			}
+
+			.games-carousel {
+				padding-bottom: 48px;
+			}
+
+			.games-viewport {
+				margin: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.game-card {
+				flex-basis: 100%;
+			}
+
+			.carousel-btn {
+				top: auto;
+				bottom: 0;
+				width: 40px;
+				height: 40px;
+				font-size: 1.8rem;
+				transform: none;
+			}
+
+			.carousel-btn:hover:not(:disabled) {
+				transform: scale(1.05);
+			}
+
+			.carousel-btn-prev {
+				left: calc(50% - 78px);
+			}
+
+			.carousel-btn-next {
+				right: calc(50% - 78px);
+			}
+
+			.carousel-dots {
+				margin-top: 12px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Header -->
+	<header>
+		<div class="container header-inner">
+			<a href="/" class="logo">
+				<img src="assets/logo.svg" alt="LOTO SZ">
+			</a>
+
+			<nav>
+				<ul class="nav-menu" id="navMenu">
+					<!-- Lotteries Dropdown -->
+					<li class="nav-item">
+						<a href="/lotteries/" class="nav-link">Лотереи ▾</a>
+						<div class="dropdown-menu">
+							<a href="/lotteries/keno/" class="dropdown-item">Keno (Кено)</a>
+							<a href="/lotteries/bingo/" class="dropdown-item">Bingo (Бинго)</a>
+							<a href="/lotteries/loto-plus/" class="dropdown-item">Loto Plus</a>
+							<a href="/lotteries/mega-loto/" class="dropdown-item">Mega Loto</a>
+							<a href="/lotteries/naval-battle/" class="dropdown-item">Морской бой</a>
+						</div>
+					</li>
+
+					<!-- Results Dropdown -->
+					<li class="nav-item">
+						<a href="/results/today/" class="nav-link">Результаты ▾</a>
+						<div class="dropdown-menu">
+							<a href="/results/today/" class="dropdown-item">Тиражи сегодня</a>
+							<a href="/results/keno/" class="dropdown-item">Архив Keno</a>
+							<a href="/results/bingo/" class="dropdown-item">Архив Bingo</a>
+							<a href="/check-ticket/" class="dropdown-item">Проверить билет</a>
+						</div>
+					</li>
+
+					<!-- Promotions Dropdown -->
+					<li class="nav-item">
+						<a href="/promotions/" class="nav-link">Акции ▾</a>
+						<div class="dropdown-menu">
+							<a href="/promotions/welcome-pack/" class="dropdown-item">Welcome Pack</a>
+							<a href="/promotions/cashback/" class="dropdown-item">Кэшбэк</a>
+							<a href="/promotions/loyalty-program/" class="dropdown-item">Программа лояльности</a>
+						</div>
+					</li>
+
+					<!-- App Dropdown -->
+					<li class="nav-item">
+						<a href="/app/" class="nav-link">Приложение ▾</a>
+						<div class="dropdown-menu">
+							<a href="/app/android/" class="dropdown-item">Скачать APK (Android)</a>
+							<a href="/app/ios/" class="dropdown-item">Скачать iOS (iPhone)</a>
+						</div>
+					</li>
+
+					<!-- Clubs -->
+					<li class="nav-item">
+						<a href="/clubs/" class="nav-link">Клубы ▾</a>
+						<div class="dropdown-menu">
+							<a href="/clubs/almaty/" class="dropdown-item">Алматы</a>
+							<a href="/clubs/astana/" class="dropdown-item">Астана</a>
+							<a href="/contacts/" class="dropdown-item">Контакты</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="auth-buttons">
+				<a href="/login/" class="btn btn-outline">Войти</a>
+				<a href="/registration/" class="btn btn-primary">Регистрация</a>
+			</div>
+
+			<div class="mobile-toggle" id="mobileToggle">☰</div>
+		</div>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="container hero-content">
+			<div class="hero-copy">
+				<h1>Казахстанские лотереи онлайн от АО Сәтті Жұлдыз</h1>
+				<p>Покупайте билеты Bingo, Keno, Loto Plus, Mega Loto и Naval Battle. Следите за тиражами, акциями и топом выигрышей в одном месте.</p>
+				
+				<div class="stats-bar">
+					<div class="stat-item">
+						<span class="stat-value">5 420 000 ₸</span>
+						<span class="stat-label">Призовой фонд сегодня</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-value">100 ₸</span>
+						<span class="stat-label">Минимальная ставка</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-value" id="next-draw-time">15:30</span>
+						<span class="stat-label">До следующего тиража Keno</span>
+					</div>
+				</div>
+
+				<a href="/registration/" class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 40px; margin-top: 30px;">Участвовать сейчас</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Games Section -->
+	<section id="games">
+		<div class="container">
+			<div class="section-title">
+				<h2>Лотереи</h2>
+				<p>Выберите игру, стоимость билета и ближайший тираж.</p>
+			</div>
+
+			<div class="games-carousel" data-carousel="games" aria-label="Популярные лотереи">
+				<button class="carousel-btn carousel-btn-prev" type="button" aria-label="Предыдущие лотереи" data-carousel-prev>‹</button>
+
+				<div class="games-viewport" data-carousel-viewport>
+					<div class="games-track" data-carousel-track>
+						<!-- Mega Loto Card -->
+						<article class="game-card">
+							<div class="game-image-placeholder game-mega">
+								<img class="game-logo" src="assets/lotteries/mega-loto.png" alt="Mega Loto">
+								</div>
+								<div class="game-content">
+									<h3 class="game-title">
+										<a class="game-title-link" href="/lotteries/mega-loto/">
+											<img class="game-title-logo" src="assets/lotteries/mega-loto.png" alt="">
+											<span class="game-title-text">Mega Loto</span>
+										</a>
+									</h3>
+									<p class="game-desc">Цена билета от 50 ₸</p>
+									<div class="game-progress"><span></span></div>
+									<a href="/results/mega-loto/" class="game-draw-link">Тиражи</a>
+							</div>
+						</article>
+
+						<!-- Loto Plus Card -->
+						<article class="game-card">
+							<div class="game-image-placeholder game-loto-plus">
+								<img class="game-logo" src="assets/lotteries/loto-plus.png" alt="Loto Plus">
+								</div>
+								<div class="game-content">
+									<h3 class="game-title">
+										<a class="game-title-link" href="/lotteries/loto-plus/">
+											<img class="game-title-logo" src="assets/lotteries/loto-plus.png" alt="">
+											<span class="game-title-text">Loto Plus</span>
+										</a>
+									</h3>
+									<p class="game-desc">Цена билета от 25 ₸</p>
+									<div class="game-progress is-yellow"><span></span></div>
+									<a href="/results/loto-plus/" class="game-draw-link">Тиражи</a>
+							</div>
+						</article>
+
+						<!-- Keno Card -->
+						<article class="game-card">
+							<div class="game-image-placeholder game-keno">
+								<img class="game-logo" src="assets/lotteries/keno.png" alt="Keno">
+								<span class="game-badge">Игра на бонусы</span>
+								</div>
+								<div class="game-content">
+									<h3 class="game-title">
+										<a class="game-title-link" href="/lotteries/keno/">
+											<img class="game-title-logo" src="assets/lotteries/keno.png" alt="">
+											<span class="game-title-text">Keno</span>
+										</a>
+									</h3>
+									<p class="game-desc">Цена билета от 100 ₸ / 100 B</p>
+									<div class="game-progress"><span></span></div>
+									<a href="/results/keno/" class="game-draw-link">Тиражи</a>
+							</div>
+						</article>
+
+						<!-- Naval Battle Card -->
+						<article class="game-card">
+							<div class="game-image-placeholder game-naval">
+								<img class="game-logo" src="assets/lotteries/naval-battle.png" alt="Naval Battle">
+								<span class="game-badge">Игра на бонусы</span>
+								</div>
+								<div class="game-content">
+									<h3 class="game-title">
+										<a class="game-title-link" href="/lotteries/naval-battle/">
+											<img class="game-title-logo" src="assets/lotteries/naval-battle.png" alt="">
+											<span class="game-title-text">Naval Battle</span>
+										</a>
+									</h3>
+									<p class="game-desc">Цена билета от 25 ₸ / 25 B</p>
+									<div class="game-progress"><span></span></div>
+									<a href="/results/naval-battle/" class="game-draw-link">Тиражи</a>
+							</div>
+						</article>
+
+						<!-- Bingo Card -->
+						<article class="game-card">
+							<div class="game-image-placeholder game-bingo">
+								<img class="game-logo" src="assets/lotteries/bingo.png" alt="Bingo">
+								<span class="game-badge">Игра на бонусы</span>
+								</div>
+								<div class="game-content">
+									<h3 class="game-title">
+										<a class="game-title-link" href="/lotteries/bingo/">
+											<img class="game-title-logo" src="assets/lotteries/bingo.png" alt="">
+											<span class="game-title-text">Bingo</span>
+										</a>
+									</h3>
+									<p class="game-desc">Цена билета от 25 ₸ / 25 B</p>
+									<div class="game-progress"><span></span></div>
+									<a href="/results/bingo/" class="game-draw-link">Тиражи</a>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<button class="carousel-btn carousel-btn-next" type="button" aria-label="Следующие лотереи" data-carousel-next>›</button>
+				<div class="carousel-dots" aria-label="Навигация по лотереям" data-carousel-dots></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Promotions -->
+	<section class="promotions-section" id="promotions">
+		<div class="container">
+			<div class="section-head-row">
+				<div class="section-title">
+					<h2>Акции</h2>
+					<p>Бонусы, кэшбэк и специальные предложения для игроков.</p>
+				</div>
+				<a href="/promotions/" class="btn btn-outline">Все акции</a>
+			</div>
+
+			<div class="promotions-grid">
+				<a class="promo-card" href="/promotions/jansurprise/">
+					<h3>Сундук удачи</h3>
+					<img src="assets/promotions/jansur-gifts.webp" alt="Сундук удачи">
+				</a>
+				<a class="promo-card" href="/promotions/welcome-pack/">
+					<h3>Welcome Pack</h3>
+					<img src="assets/promotions/welcome-pack-money.webp" alt="Welcome Pack">
+				</a>
+				<a class="promo-card" href="/promotions/loyalty-program/">
+					<h3>Программа лояльности</h3>
+					<img src="assets/promotions/loyalty.webp" alt="Программа лояльности">
+				</a>
+				<a class="promo-card" href="/promotions/referrals/">
+					<h3>Приведи друга</h3>
+					<img src="assets/promotions/friend.webp" alt="Приведи друга">
+				</a>
+				<a class="promo-card" href="/promotions/cashback/">
+					<h3>Кешбэк каждый день</h3>
+					<img src="assets/promotions/cashback.webp" alt="Кешбэк каждый день">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Top Winners -->
+	<section class="top-winners-section" id="top-winners">
+		<div class="container">
+			<div class="section-head-row">
+				<div class="section-title">
+					<h2>Топ выигрышей</h2>
+					<p>Крупные выигрыши игроков за сегодня.</p>
+				</div>
+				<div class="winners-tabs" aria-label="Период топа выигрышей">
+					<button class="winners-tab active" type="button">Сегодня</button>
+					<button class="winners-tab" type="button">Месяц</button>
+				</div>
+			</div>
+
+			<div class="top-winners-panel">
+				<table class="top-winners-table">
+					<thead>
+						<tr>
+							<th>№</th>
+							<th>Лотерея</th>
+							<th>Телефон</th>
+							<th>Билет ₸</th>
+							<th style="text-align: right;">Выигрыш ₸</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="winner-place">1</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 705 ... 61</td>
+							<td>1K</td>
+							<td class="winner-amount">700 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">2</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 747 ... 81</td>
+							<td>5K</td>
+							<td class="winner-amount">450 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">3</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 707 ... 73</td>
+							<td>5K</td>
+							<td class="winner-amount">450 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">4</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 701 ... 57</td>
+							<td>5K</td>
+							<td class="winner-amount">450 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">5</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 777 ... 00</td>
+							<td>5K</td>
+							<td class="winner-amount">450 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">6</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 707 ... 08</td>
+							<td>5K</td>
+							<td class="winner-amount">450 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">7</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 778 ... 93</td>
+							<td>1K</td>
+							<td class="winner-amount">400 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">8</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 778 ... 08</td>
+							<td>1K</td>
+							<td class="winner-amount">400 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">9</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/keno.svg" alt="Keno"></td>
+							<td>+7 701 ... 80</td>
+							<td>2K</td>
+							<td class="winner-amount">400 000</td>
+						</tr>
+						<tr>
+							<td><span class="winner-place">10</span></td>
+							<td><img class="winner-game-icon" src="assets/icons/lotoplus-small.png" alt="Loto Plus"></td>
+							<td>+7 708 ... 30</td>
+							<td>10K</td>
+							<td class="winner-amount">360 000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Us (Advantages) -->
+	<section class="advantages-section">
+		<div class="container">
+			<div class="section-title">
+				<h2>Почему выбирают ЛотоКлаб?</h2>
+				<p>Все нужное для участия в лотереях собрано в одном понятном и надежном сервисе.</p>
+			</div>
+			<div class="advantages-grid">
+				<div class="advantage-item">
+					<div class="adv-icon">⚡</div>
+					<h3>Моментальные выплаты</h3>
+					<p>Выигрыши до 10 000 ₸ зачисляются на баланс автоматически сразу после тиража.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">🔒</div>
+					<h3>Безопасность</h3>
+					<p>Официальный оператор «Сәтті Жұлдыз». Лицензия и защита данных по стандартам Казахстана.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">📱</div>
+					<h3>Удобное приложение</h3>
+					<p>Играйте где угодно. Скачайте официальное приложение LOTO SZ для iOS и Android.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">🎯</div>
+					<h3>Простые правила</h3>
+					<p>Выберите лотерею, отметьте числа и купите билет без лишних шагов.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">⏱</div>
+					<h3>Частые тиражи</h3>
+					<p>Keno и другие быстрые игры позволяют участвовать в розыгрышах в удобное время.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">🎁</div>
+					<h3>Бонусы и акции</h3>
+					<p>Для игроков доступны приветственные предложения, кэшбэк и программа лояльности.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">🔎</div>
+					<h3>Проверка билета</h3>
+					<p>Результаты и статус билета можно быстро проверить в личном кабинете или на сайте.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">💳</div>
+					<h3>Удобное пополнение</h3>
+					<p>Пополняйте баланс привычными способами и контролируйте расходы в истории операций.</p>
+				</div>
+				<div class="advantage-item">
+					<div class="adv-icon">🛡</div>
+					<h3>Ответственная игра</h3>
+					<p>Сервис ориентирован на совершеннолетних игроков и помогает сохранять контроль над игрой.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Recent Results -->
+	<section class="results-section">
+		<div class="container">
+			<div class="section-title">
+				<h2>Последние результаты тиражей</h2>
+				<p>Проверьте актуальные номера прямо сейчас.</p>
+			</div>
+
+			<!-- Keno Results Example -->
+			<div style="margin-bottom: 40px;">
+				<h3 style="color: var(--primary-color); margin-bottom: 15px;">Keno — Тираж #28930 (15:25)</h3>
+				<table class="recent-results-table">
+					<thead>
+						<tr>
+							<th>Номер тиража</th>
+							<th>Выигрышные номера</th>
+							<th>Действие</th>
+						</tr>
+					</thead>
+						<tbody>
+							<tr>
+								<td>#28930</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">3</span>
+										<span class="mini-ball">12</span>
+										<span class="mini-ball">15</span>
+										<span class="mini-ball">24</span>
+									<span class="mini-ball">29</span>
+									<span class="mini-ball">33</span>
+									<span class="mini-ball">41</span>
+									<span class="mini-ball">45</span>
+									<span class="mini-ball">50</span>
+									<span class="mini-ball">58</span>
+								</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28929</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">5</span>
+										<span class="mini-ball">9</span>
+										<span class="mini-ball">18</span>
+										<span class="mini-ball">21</span>
+										<span class="mini-ball">27</span>
+										<span class="mini-ball">36</span>
+										<span class="mini-ball">44</span>
+										<span class="mini-ball">49</span>
+										<span class="mini-ball">61</span>
+										<span class="mini-ball">70</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28928</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">1</span>
+										<span class="mini-ball">8</span>
+										<span class="mini-ball">16</span>
+										<span class="mini-ball">23</span>
+										<span class="mini-ball">31</span>
+										<span class="mini-ball">38</span>
+										<span class="mini-ball">42</span>
+										<span class="mini-ball">54</span>
+										<span class="mini-ball">63</span>
+										<span class="mini-ball">75</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28927</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">6</span>
+										<span class="mini-ball">11</span>
+										<span class="mini-ball">20</span>
+										<span class="mini-ball">28</span>
+										<span class="mini-ball">32</span>
+										<span class="mini-ball">39</span>
+										<span class="mini-ball">47</span>
+										<span class="mini-ball">52</span>
+										<span class="mini-ball">66</span>
+										<span class="mini-ball">78</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28926</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">4</span>
+										<span class="mini-ball">14</span>
+										<span class="mini-ball">19</span>
+										<span class="mini-ball">25</span>
+										<span class="mini-ball">34</span>
+										<span class="mini-ball">43</span>
+										<span class="mini-ball">51</span>
+										<span class="mini-ball">57</span>
+										<span class="mini-ball">62</span>
+										<span class="mini-ball">80</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28925</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">2</span>
+										<span class="mini-ball">10</span>
+										<span class="mini-ball">17</span>
+										<span class="mini-ball">30</span>
+										<span class="mini-ball">37</span>
+										<span class="mini-ball">46</span>
+										<span class="mini-ball">53</span>
+										<span class="mini-ball">59</span>
+										<span class="mini-ball">64</span>
+										<span class="mini-ball">72</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28924</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">7</span>
+										<span class="mini-ball">13</span>
+										<span class="mini-ball">22</span>
+										<span class="mini-ball">26</span>
+										<span class="mini-ball">35</span>
+										<span class="mini-ball">40</span>
+										<span class="mini-ball">48</span>
+										<span class="mini-ball">55</span>
+										<span class="mini-ball">68</span>
+										<span class="mini-ball">77</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28923</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">15</span>
+										<span class="mini-ball">18</span>
+										<span class="mini-ball">29</span>
+										<span class="mini-ball">33</span>
+										<span class="mini-ball">41</span>
+										<span class="mini-ball">50</span>
+										<span class="mini-ball">56</span>
+										<span class="mini-ball">60</span>
+										<span class="mini-ball">69</span>
+										<span class="mini-ball">74</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28922</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">12</span>
+										<span class="mini-ball">24</span>
+										<span class="mini-ball">28</span>
+										<span class="mini-ball">36</span>
+										<span class="mini-ball">45</span>
+										<span class="mini-ball">58</span>
+										<span class="mini-ball">65</span>
+										<span class="mini-ball">71</span>
+										<span class="mini-ball">73</span>
+										<span class="mini-ball">79</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+							<tr>
+								<td>#28921</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball">6</span>
+										<span class="mini-ball">16</span>
+										<span class="mini-ball">27</span>
+										<span class="mini-ball">34</span>
+										<span class="mini-ball">42</span>
+										<span class="mini-ball">49</span>
+										<span class="mini-ball">57</span>
+										<span class="mini-ball">67</span>
+										<span class="mini-ball">70</span>
+										<span class="mini-ball">76</span>
+									</div>
+								</td>
+								<td><a href="/results/keno/" style="color: var(--accent-color); font-weight: bold;">Архив Keno →</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			<!-- Bingo Results Example -->
+			<div>
+				<h3 style="color: var(--primary-color); margin-bottom: 15px;">Bingo — Тираж #4502 (15:20)</h3>
+				<table class="recent-results-table">
+					<thead>
+						<tr>
+							<th>Номер тиража</th>
+							<th>Выигрышные номера</th>
+							<th>Действие</th>
+						</tr>
+					</thead>
+						<tbody>
+							<tr>
+								<td>#4502</td>
+								<td>
+								<div class="ball-container">
+									<span class="mini-ball" style="background-color: #81c784;">7</span>
+									<span class="mini-ball" style="background-color: #81c784;">19</span>
+									<span class="mini-ball" style="background-color: #81c784;">22</span>
+									<span class="mini-ball" style="background-color: #81c784;">35</span>
+									<span class="mini-ball" style="background-color: #81c784;">40</span>
+								</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4501</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">4</span>
+										<span class="mini-ball" style="background-color: #81c784;">12</span>
+										<span class="mini-ball" style="background-color: #81c784;">27</span>
+										<span class="mini-ball" style="background-color: #81c784;">31</span>
+										<span class="mini-ball" style="background-color: #81c784;">44</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4500</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">9</span>
+										<span class="mini-ball" style="background-color: #81c784;">14</span>
+										<span class="mini-ball" style="background-color: #81c784;">25</span>
+										<span class="mini-ball" style="background-color: #81c784;">38</span>
+										<span class="mini-ball" style="background-color: #81c784;">43</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4499</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">2</span>
+										<span class="mini-ball" style="background-color: #81c784;">18</span>
+										<span class="mini-ball" style="background-color: #81c784;">21</span>
+										<span class="mini-ball" style="background-color: #81c784;">34</span>
+										<span class="mini-ball" style="background-color: #81c784;">48</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4498</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">6</span>
+										<span class="mini-ball" style="background-color: #81c784;">16</span>
+										<span class="mini-ball" style="background-color: #81c784;">29</span>
+										<span class="mini-ball" style="background-color: #81c784;">33</span>
+										<span class="mini-ball" style="background-color: #81c784;">41</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4497</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">8</span>
+										<span class="mini-ball" style="background-color: #81c784;">15</span>
+										<span class="mini-ball" style="background-color: #81c784;">24</span>
+										<span class="mini-ball" style="background-color: #81c784;">36</span>
+										<span class="mini-ball" style="background-color: #81c784;">47</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4496</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">1</span>
+										<span class="mini-ball" style="background-color: #81c784;">11</span>
+										<span class="mini-ball" style="background-color: #81c784;">20</span>
+										<span class="mini-ball" style="background-color: #81c784;">32</span>
+										<span class="mini-ball" style="background-color: #81c784;">45</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4495</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">5</span>
+										<span class="mini-ball" style="background-color: #81c784;">17</span>
+										<span class="mini-ball" style="background-color: #81c784;">23</span>
+										<span class="mini-ball" style="background-color: #81c784;">39</span>
+										<span class="mini-ball" style="background-color: #81c784;">50</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4494</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">10</span>
+										<span class="mini-ball" style="background-color: #81c784;">13</span>
+										<span class="mini-ball" style="background-color: #81c784;">26</span>
+										<span class="mini-ball" style="background-color: #81c784;">37</span>
+										<span class="mini-ball" style="background-color: #81c784;">49</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+							<tr>
+								<td>#4493</td>
+								<td>
+									<div class="ball-container">
+										<span class="mini-ball" style="background-color: #81c784;">3</span>
+										<span class="mini-ball" style="background-color: #81c784;">19</span>
+										<span class="mini-ball" style="background-color: #81c784;">28</span>
+										<span class="mini-ball" style="background-color: #81c784;">35</span>
+										<span class="mini-ball" style="background-color: #81c784;">46</span>
+									</div>
+								</td>
+								<td><a href="/results/bingo/" style="color: var(--accent-color); font-weight: bold;">Архив Bingo →</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			<div style="text-align: center; margin-top: 30px;">
+				<a href="/results/today/" class="btn btn-outline">Все результаты тиражей сегодня</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- App Download -->
+	<section id="app-download">
+		<div class="container">
+			<div class="app-section">
+				<div class="app-text" style="flex: 1;">
+					<h2>Скачайте приложение LOTO SZ</h2>
+					<p>Получите доступ ко всем лотереям в один клик. Push-уведомления о выигрыше, удобный интерфейс и возможность играть офлайн.</p>
+				</div>
+				<div class="app-buttons">
+					<a href="/app/android/" class="store-btn">
+						<span>🤖</span> Скачать APK (Android)
+					</a>
+					<a href="/app/ios/" class="store-btn">
+						<span>🍎</span> Скачать iOS (iPhone)
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Glossary Section -->
+	<section class="glossary-section" id="glossary">
+		<div class="container">
+			<div class="section-title">
+				<h2>Глоссарий терминов</h2>
+				<p>Короткие объяснения слов, которые часто встречаются в лотереях и результатах тиражей.</p>
+			</div>
+
+			<div class="glossary-grid">
+				<div class="glossary-item">
+					<div class="glossary-letter">Т</div>
+					<div>
+						<div class="glossary-term">Тираж</div>
+						<p class="glossary-desc">Отдельный розыгрыш, в котором определяются выигрышные номера.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">Б</div>
+					<div>
+						<div class="glossary-term">Билет</div>
+						<p class="glossary-desc">Подтверждение участия в выбранной лотерее с вашей комбинацией чисел.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">Д</div>
+					<div>
+						<div class="glossary-term">Джекпот</div>
+						<p class="glossary-desc">Главный приз лотереи, который получает игрок с самой точной комбинацией.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">П</div>
+					<div>
+						<div class="glossary-term">Призовой фонд</div>
+						<p class="glossary-desc">Общая сумма денег, распределяемая между победителями розыгрыша.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">С</div>
+					<div>
+						<div class="glossary-term">Ставка</div>
+						<p class="glossary-desc">Сумма, которую игрок выбирает для участия в конкретной игре или билете.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">К</div>
+					<div>
+						<div class="glossary-term">Коэффициент</div>
+						<p class="glossary-desc">Показатель, который помогает рассчитать возможный выигрыш по результату игры.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">Н</div>
+					<div>
+						<div class="glossary-term">Номер тиража</div>
+						<p class="glossary-desc">Уникальный номер розыгрыша, по которому удобно искать результаты в архиве.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">В</div>
+					<div>
+						<div class="glossary-term">Выигрышные номера</div>
+						<p class="glossary-desc">Числа, выпавшие в тираже и используемые для проверки билетов.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">А</div>
+					<div>
+						<div class="glossary-term">Архив результатов</div>
+						<p class="glossary-desc">Раздел с прошлыми тиражами, где можно найти номера и историю розыгрышей.</p>
+					</div>
+				</div>
+				<div class="glossary-item">
+					<div class="glossary-letter">Л</div>
+					<div>
+						<div class="glossary-term">Личный кабинет</div>
+						<p class="glossary-desc">Раздел пользователя с билетами, балансом, историей операций и выигрышами.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section id="faq">
+		<div class="container" style="max-width: 800px;">
+			<div class="section-title">
+				<h2>Часто задаваемые вопросы</h2>
+			</div>
+			
+			<div class="faq-item">
+				<button class="faq-question">Как купить лотерейный билет онлайн? <span class="faq-icon">▼</span></button>
+				<div class="faq-answer">
+					<p>Для покупки билета вам необходимо зарегистрироваться на сайте или в приложении, пополнить баланс любым удобным способом (Kaspi, карта) и выбрать интересующую лотерею. После выбора чисел нажмите «Купить билет».</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">Как проверить выигрыш билета? <span class="faq-icon">▼</span></button>
+				<div class="faq-answer">
+					<p>Вы можете проверить билет автоматически в личном кабинете или на странице <a href="/check-ticket/" style="color: var(--accent-color);">проверки билета</a>, введя номер билета и код безопасности. Выигрыши до 10 000 ₸ зачисляются мгновенно.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">Кто является официальным оператором? <span class="faq-icon">▼</span></button>
+				<div class="faq-answer">
+					<p>Официальным оператором лотерей в Казахстане является АО «Сәтті Жұлдыз». Наш сайт и приложение являются авторизованными площадками для продажи билетов.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">Есть ли бонусы за регистрацию? <span class="faq-icon">▼</span></button>
+				<div class="faq-answer">
+					<p>Да! Новым пользователям доступен Welcome Pack — приветственный бонус на первый депозит. Подробности в разделе <a href="/promotions/welcome-pack/" style="color: var(--accent-color);">Акции</a>.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-grid">
+				<div class="footer-col">
+					<h3>Лотереи</h3>
+					<ul class="footer-links">
+						<li><a href="/lotteries/keno/">Keno (Кено)</a></li>
+						<li><a href="/lotteries/bingo/">Bingo (Бинго)</a></li>
+						<li><a href="/lotteries/loto-plus/">Loto Plus</a></li>
+						<li><a href="/lotteries/mega-loto/">Mega Loto</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h3>Информация</h3>
+					<ul class="footer-links">
+						<li><a href="/results/today/">Результаты сегодня</a></li>
+						<li><a href="/check-ticket/">Проверить билет</a></li>
+						<li><a href="/how-to/buy-lottery-ticket-online/">Как играть</a></li>
+						<li><a href="/promotions/cashback/">Кэшбэк</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h3>О компании</h3>
+					<ul class="footer-links">
+						<li><a href="/about/operator/">Оператор «Сәтті Жұлдыз»</a></li>
+						<li><a href="/about/security/">Безопасность</a></li>
+						<li><a href="/about/anti-fraud/">Защита от мошенников</a></li>
+						<li><a href="/contacts/">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h3>Клубы</h3>
+					<ul class="footer-links">
+						<li><a href="/clubs/almaty/">Алматы</a></li>
+						<li><a href="/clubs/astana/">Астана</a></li>
+						<li><a href="/app/android/">Скачать приложение</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>&copy; 2024 ЛотоКлаб (LotoClub). Все права защищены.</p>
+				<div class="responsible-play">
+					<span style="font-size: 1.5rem;">🔞</span>
+					<span>Играйте ответственно. Сайт предназначен для лиц старше 18 лет (21+ для крупных призов).</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script>
+		// Mobile Menu Toggle
+		const mobileToggle = document.getElementById('mobileToggle');
+		const navMenu = document.getElementById('navMenu');
+
+		mobileToggle.addEventListener('click', () => {
+			navMenu.classList.toggle('active');
+		});
+
+		// FAQ Accordion
+		const faqItems = document.querySelectorAll('.faq-item');
+
+		faqItems.forEach(item => {
+			const question = item.querySelector('.faq-question');
+			question.addEventListener('click', () => {
+				// Close other open items
+				faqItems.forEach(otherItem => {
+					if (otherItem !== item) {
+						otherItem.classList.remove('active');
+					}
+				});
+				// Toggle current item
+				item.classList.toggle('active');
+			});
+		});
+
+		// Games Carousel
+		const gamesCarousel = document.querySelector('[data-carousel="games"]');
+
+		if (gamesCarousel) {
+			const viewport = gamesCarousel.querySelector('[data-carousel-viewport]');
+			const track = gamesCarousel.querySelector('[data-carousel-track]');
+			const cards = Array.from(track.children);
+			const prevBtn = gamesCarousel.querySelector('[data-carousel-prev]');
+			const nextBtn = gamesCarousel.querySelector('[data-carousel-next]');
+			const dotsContainer = gamesCarousel.querySelector('[data-carousel-dots]');
+			let activeIndex = 0;
+			let dots = [];
+			let pointerStartX = 0;
+			let pointerCurrentX = 0;
+			let isPointerDown = false;
+
+			function getVisibleCards() {
+				if (!cards.length) {
+					return 1;
+				}
+
+				const cardWidth = cards[0].getBoundingClientRect().width;
+				const trackStyles = window.getComputedStyle(track);
+				const gap = parseFloat(trackStyles.columnGap || trackStyles.gap) || 0;
+
+				if (!cardWidth) {
+					return 1;
+				}
+
+				return Math.max(1, Math.round((viewport.clientWidth + gap) / (cardWidth + gap)));
+			}
+
+			function getMaxIndex() {
+				return Math.max(cards.length - getVisibleCards(), 0);
+			}
+
+			function buildDots() {
+				const dotsCount = getMaxIndex() + 1;
+
+				if (dots.length === dotsCount) {
+					return;
+				}
+
+				dotsContainer.innerHTML = '';
+				dots = Array.from({ length: dotsCount }, (_, index) => {
+					const dot = document.createElement('button');
+					dot.className = 'carousel-dot';
+					dot.type = 'button';
+					dot.setAttribute('aria-label', `Показать группу лотерей ${index + 1}`);
+					dot.addEventListener('click', () => setActiveSlide(index));
+					dotsContainer.appendChild(dot);
+					return dot;
+				});
+			}
+
+			function updateCarousel() {
+				buildDots();
+
+				const maxIndex = getMaxIndex();
+				activeIndex = Math.min(activeIndex, maxIndex);
+				const firstCardOffset = cards[0] ? cards[0].offsetLeft : 0;
+				const offset = cards[activeIndex] ? cards[activeIndex].offsetLeft - firstCardOffset : 0;
+
+				track.style.transform = `translateX(-${offset}px)`;
+				prevBtn.disabled = activeIndex === 0;
+				nextBtn.disabled = activeIndex === maxIndex;
+
+				dots.forEach((dot, index) => {
+					const isActive = index === activeIndex;
+					dot.classList.toggle('active', isActive);
+					dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+				});
+			}
+
+			function setActiveSlide(index) {
+				const maxIndex = getMaxIndex();
+				activeIndex = Math.max(0, Math.min(index, maxIndex));
+				updateCarousel();
+			}
+
+			prevBtn.addEventListener('click', () => setActiveSlide(activeIndex - 1));
+			nextBtn.addEventListener('click', () => setActiveSlide(activeIndex + 1));
+
+			gamesCarousel.addEventListener('keydown', event => {
+				if (event.key === 'ArrowLeft') {
+					setActiveSlide(activeIndex - 1);
+				}
+
+				if (event.key === 'ArrowRight') {
+					setActiveSlide(activeIndex + 1);
+				}
+			});
+
+			viewport.addEventListener('pointerdown', event => {
+				pointerStartX = event.clientX;
+				pointerCurrentX = event.clientX;
+				isPointerDown = true;
+				viewport.setPointerCapture(event.pointerId);
+			});
+
+			viewport.addEventListener('pointermove', event => {
+				if (!isPointerDown) {
+					return;
+				}
+
+				pointerCurrentX = event.clientX;
+			});
+
+			function finishPointerSwipe() {
+				if (!isPointerDown) {
+					return;
+				}
+
+				const swipeDistance = pointerCurrentX - pointerStartX;
+
+				if (Math.abs(swipeDistance) > 50) {
+					setActiveSlide(activeIndex + (swipeDistance < 0 ? 1 : -1));
+				}
+
+				isPointerDown = false;
+			}
+
+			viewport.addEventListener('pointerup', finishPointerSwipe);
+			viewport.addEventListener('pointercancel', finishPointerSwipe);
+			window.addEventListener('resize', updateCarousel);
+
+			updateCarousel();
+		}
+
+		// Simple Countdown Timer Simulation
+		function startCountdown() {
+			let duration = 60 * 15; // 15 minutes in seconds for demo
+			const display = document.querySelector('#next-draw-time');
+			
+			setInterval(function () {
+				let minutes = parseInt(duration / 60, 10);
+				let seconds = parseInt(duration % 60, 10);
+
+				minutes = minutes < 10 ? "0" + minutes : minutes;
+				seconds = seconds < 10 ? "0" + seconds : seconds;
+
+				display.textContent = minutes + ":" + seconds;
+
+				if (--duration < 0) {
+					duration = 60 * 15; // Reset for demo
+				}
+			}, 1000);
+		}
+		
+		startCountdown();
+	</script>
+</body>
+</html>
